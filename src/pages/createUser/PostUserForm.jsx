@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { ApiService } from "../../service";
-import './PostUserForm.css'
 
 const PostUserForm = () => {
     const [form, setForm] = useState({
