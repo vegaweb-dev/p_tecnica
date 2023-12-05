@@ -1,5 +1,4 @@
 import React from 'react'
-import './UserListTableRow.css'
 
 const UserListTableRow = ({ user }) => {
     const { email, avatar } = user;
