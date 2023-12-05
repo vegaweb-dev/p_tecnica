@@ -1,17 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import { ApiService } from '../../service';
-import './loginForm.css'
-import email_icon from './assets/email.png'
-import password_icon from './assets/password.png'
-import signin_icon from './assets/person.png'
+import './loginForm.css';
+import email_icon from './assets/email.png';
+import password_icon from './assets/password.png';
+import signin_icon from './assets/person.png';
 
 const initialValue = {
     email: '',
     password: ''
 
 }
-let token = window.localStorage.getItem("token") || null
+let token = window.localStorage.getItem("token") || null;
 
+const isEmailValid = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+};
 const LoginForm = () => {
     const [form, setForm] = useState(initialValue);
     const handleChange = (e) => {
@@ -20,18 +24,27 @@ const LoginForm = () => {
             [e.target.name]: e.target.value
         })
 
-    }
+    };
+
     const handleSubmit = (e) => {
-        e.preventDefault()
-        ApiService.login(form)
-        setForm(initialValue)
+        e.preventDefault();
+        if(!form.email || !form.password){
+            alert('Datos incompletos, Porfavor asegurese de ingresar todos los campos');
+            return;
+        }
+        if (isEmailValid(form.email) === false) {
+            alert('Por favor, ingrese un correo electrónico válido.');
+            return;
+        };
+        ApiService.login(form);
+        setForm(initialValue);
     }
 
     const handleLogout = (e) => {
         e.preventDefault();
         window.localStorage.removeItem("token");
-      };
-      
+    };
+
     return (
         <>
             {!token ? (
