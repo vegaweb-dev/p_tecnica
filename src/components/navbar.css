@@ -1,17 +1,17 @@
 .navbar-container {
-    background-color: #3c009d;
+    background-color: var(--primary-color);
 }
 
 
 
 .NavLink {
     text-decoration: none;
-    color: #fff;
+    color:var(--primary-background);
     font-size: 18px;
     font-weight: 700;
     transition: color 0.3s ease-in-out;
 }
 
 .NavLink:hover {
-    color: #938787;
+    color: var(--terciary-hover);
 }

@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
+:root {
+    --primary-color:#3c009d;
+    --primary-hover:rgb(111, 144, 200);
+    --primary-background: #fff;
+    --secondary-background:#e7f6fd;
+    --primary-shadow: rgba(0, 0, 0, 0.3);
+    --secondary-hover:#797979;
+    --terciary-hover:#938787;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: var(--primary-background);
+  font-family: 'Ephesis';
+
+}
