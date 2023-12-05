@@ -18,7 +18,7 @@ const PostUserForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         ApiService.create(form);
-        setForm({name:'',job:''})
+        setForm({ name: '', job: '' })
     }
     return (
         <>
@@ -30,17 +30,17 @@ const PostUserForm = () => {
 
                 <div className="inputs">
                     <div className="input">
-                    <input type="text" name="name" value={form.name} onChange={handleChange} placeholder="Ingresa tu nombre" />
+                        <input type="text" name="name" value={form.name} onChange={handleChange} className='input-value' placeholder="Ingresa tu nombre" />
                     </div>
 
                     <div className="input">
-                    <input type="text" name="job" value={form.job} onChange={handleChange} placeholder="Ingresar tu trabajo" />
+                        <input type="text" name="job" value={form.job} onChange={handleChange} className='input-value' placeholder="Ingresar tu trabajo" />
                     </div>
 
                     <div className="input">
-                    <input type="submit" value='Enviar Datos' />
+                        <input type="submit" value='Enviar Datos' className='input-value' />
                     </div>
-                
+
                 </div>
             </form>
         </>

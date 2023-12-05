@@ -1,8 +1,8 @@
 import React from 'react'
 import './UserListTableRow.css'
 
-const UserListTableRow = ({user}) => {
-    const {email,avatar}= user;
+const UserListTableRow = ({ user }) => {
+    const { email, avatar } = user;
     return (
         <>
             <tr>

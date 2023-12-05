@@ -28,7 +28,7 @@ const LoginForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!form.email || !form.password){
+        if (!form.email || !form.password) {
             alert('Datos incompletos, Porfavor asegurese de ingresar todos los campos');
             return;
         }
@@ -66,7 +66,7 @@ const LoginForm = () => {
 
                         <div className="input">
                             <img src={signin_icon} alt="person_icon" />
-                            <input type="submit" value='Acceder' className='input input-submit' />
+                            <input type="submit" value='Acceder' />
                         </div>
                     </div>
                 </form>
