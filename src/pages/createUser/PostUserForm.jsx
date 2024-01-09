@@ -7,7 +7,6 @@ const PostUserForm = () => {
         job: ''
     })
 
-
     const handleChange = (e) => {
         setForm({
             ...form,
@@ -20,6 +19,7 @@ const PostUserForm = () => {
         ApiService.create(form);
         setForm({ name: '', job: '' })
     }
+
     return (
         <>
             <form onSubmit={handleSubmit} className="container">

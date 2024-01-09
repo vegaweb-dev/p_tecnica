@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <div className='navbar-container'>
             <ul>
-               
+
                 <li>
                     <NavLink to='/login' className='NavLink'>Login Form</NavLink>
                 </li>
